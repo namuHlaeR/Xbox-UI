@@ -4,15 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <title>Xbox UI</title>
 </head>
 <body>
-    <section id="utilities" class="utilities">
-        <div class="profile"></div>
-        <div class="side-icons"></div>
-    </section>
-    <section id="home" class="container">
+    <!--- Home section -->
+    <section id="home" class="container-home">
+        <!--- Top info bar-->
+        <article id="utilities" class="utilities">
+            <div class="profile">
+                <img src="./icons/account_circle_white_24dp.svg" alt="profile-pic" class="profile-pic">
+                <p class="p-name center">User something</p>
+            </div>
+            <div class="side-icons center">
+                <img src="./icons/mic_white_24dp.svg" alt="mic">
+                <img src="./icons/battery_full_white_24dp.svg" alt="battery">
+                <p class="time">00:00</p>
+            </div>
+        </article>
         <div id="boxXL" class="box-XL box0"></div>
         <div id="boxS" class="box-S box1"></div>
         <div id="boxS" class="box-S box2"></div>
@@ -25,6 +36,25 @@
         <div id="boxM" class="box-M box9"></div>
         <div id="boxM" class="box-M box10"></div>
     </section>
+    <!--- Latest played section-->
+    <section id="latest" class="container">
+        <div id="boxXL" class="box-XL box0"></div>
+        <div id="boxS" class="box-S box1"></div>
+        <div id="boxS" class="box-S box2"></div>
+        <div id="boxS" class="box-S box3"></div>
+        <div id="boxS" class="box-S box4"></div>
+        <div id="boxS" class="box-S box5"></div>
+        <div id="boxS" class="box-S box6"></div>
+        <div id="boxM" class="box-M box7"></div>
+        <div id="boxM" class="box-M box8"></div>
+        <div id="boxM" class="box-M box9"></div>
+        <div id="boxM" class="box-M box10"></div>
+    </section>
+    <!--- Extra utiities box -->
+    <div class="extra-util">
+        <img src="./icons/check_circle_outline_white_24dp.svg" alt="customize">
+        <img src="./icons/check_circle_outline_white_24dp.svg" alt="search">
+    </div>
     <script src="./app.js"></script>
 </body>
 </html>
