@@ -19,7 +19,7 @@
 .container-home{
     background-color: red;
     width: 100%;
-    height: 87vh;
+    height: 86vh;
     display: grid;
     grid-template-columns: auto 34rem 32rem 32rem 32rem auto;
     grid-template-rows: 18rem 32rem 20rem 3rem;
@@ -38,11 +38,12 @@
 }
 .container-nav{
     position: absolute;
-    top: 85.1vh;
+    top: 86vh;
     display: grid;
-    grid-template-columns: auto 50rem auto;
-    grid-template-rows: auto;
-    width: 40%;
+    grid-template-columns: auto 32rem 3rem;
+    grid-template-rows: 9rem 32rem 32rem;
+    width: 29%;
+    height: 100%;
 }
 /* Top info bar */
 .utilities{
@@ -105,9 +106,9 @@ img[src*="battery"]{
     font-weight: 500;
 }
 /* Navigation style */
-.game-name{
-    font-size: 4rem;
-    font-weight: 200;
+.nav a{
+    text-decoration: none;
+    color: inherit;
 }
 .nav li{
     list-style: none;
@@ -115,16 +116,20 @@ img[src*="battery"]{
     font-weight: 200;
 }
 .nav h1{
-    height: 5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    margin-bottom: .4rem;
 }
 /* Box placements */
 /* Navigation */
-.box-nav{
+.box-nav0{
     grid-column: 2/3;
-    grid-row: 1;
+}
+.box-nav1{
+    grid-column: 2/3;
+    grid-row: 2;
+    margin-bottom: 6rem;
 }
 /*Utilities */
 .utilities{
