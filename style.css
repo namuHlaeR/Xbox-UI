@@ -35,7 +35,7 @@ h2{
 .container{
     background-color: green;
     width: 100%;
-    height: 100vh;
+    height: 91vh;
     display: grid;
     grid-template-columns: 7.44rem 34rem 32rem 32rem 32rem auto;
     grid-template-rows: 9rem 32rem 32rem auto;
@@ -133,11 +133,29 @@ a{
     color: seashell;
 }
 /* Store navigation */
+#store{
+    background-color: skyblue;
+}
+.store-nav{
+    grid-column: 2;
+    grid-row: 3;
+}
 .store-nav h2{
     margin-bottom: 2.6rem;
     color: seashell;
 }
-
+.store-tag{
+    position: relative;
+    top: -7rem;
+}
+.store-1{
+    grid-column: 2;
+    position: relative;
+    top: -5.6rem;
+}
+.store-1 h2{
+    margin-bottom: 1.3rem;
+}
 /* Box placements */
 /*Utilities */
 .utilities{
