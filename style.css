@@ -10,6 +10,12 @@
     font-weight: 500;
     color: white;
 }
+h1{
+    font-size: 3.6rem;
+}
+h2{
+    font-size: 2.5rem;
+}
 .center{
     display: flex;
     justify-content: center;
@@ -19,7 +25,7 @@
 .container-home{
     background-color: red;
     width: 100%;
-    height: 86vh;
+    height: 87vh;
     display: grid;
     grid-template-columns: auto 34rem 32rem 32rem 32rem auto;
     grid-template-rows: 18rem 32rem 20rem 3rem;
@@ -31,19 +37,10 @@
     width: 100%;
     height: 100vh;
     display: grid;
-    grid-template-columns: auto 34rem 32rem 32rem 32rem auto;
+    grid-template-columns: 7.44rem 34rem 32rem 32rem 32rem auto;
     grid-template-rows: 9rem 32rem 32rem auto;
     grid-column-gap: 1rem;
     grid-row-gap: 1rem;
-}
-.container-nav{
-    position: absolute;
-    top: 86vh;
-    display: grid;
-    grid-template-columns: auto 32rem 3rem;
-    grid-template-rows: 9rem 32rem 32rem;
-    width: 29%;
-    height: 100%;
 }
 /* Top info bar */
 .utilities{
@@ -106,31 +103,42 @@ img[src*="battery"]{
     font-weight: 500;
 }
 /* Navigation style */
-.nav a{
+a{
     text-decoration: none;
-    color: inherit;
+    color: cornsilk;
 }
-.nav li{
-    list-style: none;
-    font-size: 2rem;
-    font-weight: 200;
+/* Navigation home */
+.home, 
+.store,
+.friends,
+.updates{
+    display: none;
 }
-.nav h1{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    margin-bottom: .4rem;
+/* Latest game navigation */
+.game{
+    position: relative;
+    top: -7rem;
 }
+.game-1{
+    grid-column: 2;
+    position: relative;
+    top: -1.5rem;
+}
+.game-nav{
+    grid-column: 2;
+    grid-row: 3;
+}
+.game-nav h2{
+    margin-bottom: 2.6rem;
+    color: seashell;
+}
+/* Store navigation */
+.store-nav h2{
+    margin-bottom: 2.6rem;
+    color: seashell;
+}
+
 /* Box placements */
-/* Navigation */
-.box-nav0{
-    grid-column: 2/3;
-}
-.box-nav1{
-    grid-column: 2/3;
-    grid-row: 2;
-    margin-bottom: 6rem;
-}
 /*Utilities */
 .utilities{
     grid-column: 2/6;
@@ -142,10 +150,17 @@ img[src*="battery"]{
     grid-column: 5/6;
     grid-row: 4;
 }
+/* Navigation */
+.box-nav1{
+    grid-row: 2/3;
+    grid-column: 2/3;
+}
 /* Home */
 .box0{
     grid-column: 2/3;
     grid-row: 2/3;
+    position: relative;
+    top: 1rem;
 }
 .box1{
     grid-column: 3/4;
@@ -251,8 +266,6 @@ img[src*="battery"]{
 }
 /* Box sizing */
 .box-XL{
-    position: relative;
-    top: 1rem;
     background: wheat;
     height: 30rem;
     width: 32rem;
@@ -288,7 +301,7 @@ img[src*="battery"]{
 }
 /* Box animations */
 .box-XL:hover{
-    outline: .5rem solid green;
+    outline: .5rem solid cornflowerblue;
 }
 .box-M:hover{
     outline: .5rem solid green;
