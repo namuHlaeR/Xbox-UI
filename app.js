@@ -1,4 +1,7 @@
 // DOM component selectors
+    // Utilities selectors
+    
+    // Box selectors
 const box0 = document.querySelector('.box0');
 const box1 = document.querySelector('.box1');
 const box2 = document.querySelector('.box2');
@@ -12,9 +15,24 @@ const box9 = document.querySelector('.box9');
 const box10 = document.querySelector('.box10');
 const box11 = document.querySelector('.box11');
 
-box0.classList.add('hidden');
+
+// TESTING AREA
+
+
+//box0.classList.add('overlay-box');
+// box0.style.animation('translate 2s linear infinite')
+overlayText(box0);
+overlayText(box1);
+overlayText(box2);
+
+
 // Event listeners
 
 
-
 // Functions
+function overlayText(e){
+    e.classList.add('overlay-box');
+    
+    
+   
+}
