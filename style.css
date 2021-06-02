@@ -333,16 +333,41 @@ a{
 .box-XS:hover{
     outline: .5rem solid yellowgreen;
 }
-.box7::after{
-    content: '';
-    background-color: yellow;
-    height: 25%;
-    width: 32rem;
-    opacity: 0.4;
-    bottom: 0;
-    position: absolute;
-}
 /* TESTING AREA */
 .hidden{
     background-color: yellow
+}
+
+.overlay-box:hover:after{
+    content: '';
+    background-color: black;
+    height: 10%;
+    width: inherit;
+    bottom: 0;
+    opacity: 0.6;
+    position: absolute;
+    animation: translate .3s ease-out;
+}
+
+@keyframes translate {
+    0%{
+        transform: translateY(2rem);
+        opacity: 0;
+}
+    50%{
+        opacity: 0;
+}   
+    90%{
+        opacity: 0.2;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 0.6;
+    }
+}
+
+.game-text{
+    height: 4rem;
+    position: relative;
+    display: flex;
 }
