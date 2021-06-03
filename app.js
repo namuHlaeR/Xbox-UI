@@ -1,6 +1,6 @@
 // DOM component selectors
     // Utilities selectors
-    
+const boxText = document.querySelector('.game-text');
     // Box selectors
 const box0 = document.querySelector('.box0');
 const box1 = document.querySelector('.box1');
@@ -17,14 +17,10 @@ const box11 = document.querySelector('.box11');
 
 
 // TESTING AREA
+const c = 'popcorn';
 
-
-//box0.classList.add('overlay-box');
-// box0.style.animation('translate 2s linear infinite')
 overlayText(box0);
 overlayText(box1);
-overlayText(box2);
-
 
 // Event listeners
 
@@ -32,7 +28,5 @@ overlayText(box2);
 // Functions
 function overlayText(e){
     e.classList.add('overlay-box');
-    
-    
-   
-}
+    e.setAttribute('data-boxText', c)
+};
