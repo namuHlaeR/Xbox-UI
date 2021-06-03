@@ -21,6 +21,7 @@ const c = 'popcorn';
 
 overlayText(box0);
 overlayText(box1);
+overlayText(box2);
 
 // Event listeners
 
@@ -28,5 +29,7 @@ overlayText(box1);
 // Functions
 function overlayText(e){
     e.classList.add('overlay-box');
-    e.setAttribute('data-boxText', c)
+    e.classList.add('text')
 };
+
+boxText.setAttribute('text', c)

@@ -338,14 +338,37 @@ a{
     background-color: yellow
 }
 
-.overlay-box:hover:after{
+.overlay-box:hover:before{
     content: '';
     background-color: black;
-    height: 3rem;
+    height: 25%;
     width: inherit;
     bottom: 0;
     opacity: 0.4;
     position: absolute;
+    animation: translate .25s ease-out;
+}
+.overlay-box:hover::after{
+    content: 'Teletubie';
+    height: max-content;
+    width: inherit;
+    padding: 1rem;
+    padding-left: 2rem;
+    position: absolute;
+    bottom: 0;
+    color: maroon;
+    border: 1px solid black;
+}
+.overlay-box:hover::after{
+    content: 'Teletubie';
+    height: max-content;
+    width: inherit;
+    padding: 1rem;
+    padding-left: 2rem;
+    position: absolute;
+    bottom: 0;
+    color: maroon;
+    border: 1px solid black;
     animation: translate .25s ease-out;
 }
 
@@ -365,50 +388,3 @@ a{
         opacity: 0.4;
     }
 }
-.text:hover::before{
-    position: absolute;
-    bottom: 0;
-    height: 4rem;
-    width: inherit;
-    color: maroon;
-    border: 1px solid black;
-    animation: translating .2s ease-out;
-}
-.text:hover:after{
-    font-size: 2rem;
-    padding: 1rem;
-    padding-left: 2rem;
-    position: absolute;
-    bottom: 0;
-
-}
-/*
-.game-text{
-    height: max-content;
-    width: inherit;
-    padding: 1rem;
-    padding-left: 2rem;
-    position: absolute;
-    bottom: 0;
-    color: maroon;
-    border: 1px solid black;
-    animation: translating .2s ease-out;
-}*/
-
-@keyframes translating {
-    0%{
-        transform: translateY(2rem);
-        opacity: 0;
-}
-    50%{
-        opacity: 0;
-}   
-    90%{
-        opacity: 0.1;
-    }
-    100%{
-        transform: translateY();
-        opacity: 0.4;
-    }
-}
-
