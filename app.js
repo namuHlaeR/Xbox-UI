@@ -14,22 +14,19 @@ const box8 = document.querySelector('.box8');
 const box9 = document.querySelector('.box9');
 const box10 = document.querySelector('.box10');
 const box11 = document.querySelector('.box11');
+const text0 = document.querySelector('.text');
 
 
 // TESTING AREA
-const c = 'popcorn';
 
-overlayText(box0);
 overlayText(box1);
 overlayText(box2);
 
 // Event listeners
-
+box0.addEventListener('mouseover', overlayText);
 
 // Functions
-function overlayText(e){
-    e.classList.add('overlay-box');
-    e.classList.add('text')
+function overlayText(){
+    text0.classList.add('show');
+    //e.classList.add('text')
 };
-
-boxText.setAttribute('text', c)

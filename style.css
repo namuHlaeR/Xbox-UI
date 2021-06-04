@@ -333,44 +333,82 @@ a{
 .box-XS:hover{
     outline: .5rem solid yellowgreen;
 }
+/* Box styling */
+.box7::after{
+    content: '';
+    background-color: black;
+    height: 6rem;
+    width: inherit;
+    bottom: 0;
+    opacity: .5;
+    position: absolute;
+    border-radius: 0 0 .4rem .4rem;
+}
+.box7-text{
+    color: white;
+    height: max-content;
+    width: 28rem;
+    bottom: 0;
+    position: absolute;
+    padding: 2rem;
+    font-size: 2rem;
+    z-index: 5;
+}
 /* TESTING AREA */
 .hidden{
     background-color: yellow
-}
-
-.overlay-box:hover:before{
+}/*
+.overlay-box:hover::after{
     content: '';
     background-color: black;
-    height: 25%;
     width: inherit;
+    height: 20%;
     bottom: 0;
     opacity: 0.4;
     position: absolute;
-    animation: translate .25s ease-out;
-}
-.overlay-box:hover::after{
-    content: 'Teletubie';
+}*/
+.text{
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    font-size: 2rem;
+    padding: 2rem;
+    padding-left: 1rem;
+    margin-top: 2rem;
     height: max-content;
-    width: inherit;
+    width: 100%;
+    color: white;
+    opacity: 0;
+    z-index: 5;
+}
+.text::after{
+    content: '';
+    position: absolute;
+    bottom: -2rem;
+    left: -2rem;
+    background: black;
+    opacity: .4;
+    width: 100%;
+    height: 130%;
+    z-index: 0;
+}
+.show{
+    opacity: 1;
+}
+/*
+.overlay-box:hover::after{
+    content: attr(data-boxText);
+    overflow-wrap: break-word;
+    height: ;
+    max-width: 75%;
     padding: 1rem;
     padding-left: 2rem;
     position: absolute;
     bottom: 0;
     color: maroon;
     border: 1px solid black;
-}
-.overlay-box:hover::after{
-    content: 'Teletubie';
-    height: max-content;
-    width: inherit;
-    padding: 1rem;
-    padding-left: 2rem;
-    position: absolute;
-    bottom: 0;
-    color: maroon;
-    border: 1px solid black;
     animation: translate .25s ease-out;
-}
+}*/
 
 @keyframes translate {
     0%{
