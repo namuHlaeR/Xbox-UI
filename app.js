@@ -1,6 +1,5 @@
 // DOM component selectors
     // Utilities selectors
-const boxText = document.querySelector('text');
 
     // Box selectors
 const box0 = document.querySelector('.box0');
@@ -23,65 +22,104 @@ const tl = new TimelineMax();
 // Event listeners
 box0.addEventListener("mouseover", overlayOn);
 box0.addEventListener('mouseout', overlayOff);
+fillText(box0);
 box1.addEventListener("mouseover", overlayOn);
 box1.addEventListener('mouseout', overlayOff);
+fillText(box1);
 box2.addEventListener("mouseover", overlayOn);
 box2.addEventListener('mouseout', overlayOff);
+fillText(box2);
 box3.addEventListener("mouseover", overlayOn);
 box3.addEventListener('mouseout', overlayOff);
+fillText(box3);
 box4.addEventListener("mouseover", overlayOn);
 box4.addEventListener('mouseout', overlayOff);
+fillText(box4);
 box5.addEventListener("mouseover", overlayOn);
 box5.addEventListener('mouseout', overlayOff);
+fillText(box5);
 box6.addEventListener("mouseover", overlayOn);
 box6.addEventListener('mouseout', overlayOff);
+fillText(box6);
+fillText(box7);
 box8.addEventListener("mouseover", overlayOn);
 box8.addEventListener('mouseout', overlayOff);
+fillText(box8);
 box9.addEventListener("mouseover", overlayOn);
 box9.addEventListener('mouseout', overlayOff);
+fillText(box9);
 box10.addEventListener("mouseover", overlayOn);
 box10.addEventListener('mouseout', overlayOff);
+fillText(box10);
 
 
 // Functions
+    // Shows box overlay
 function overlayOn(e){
     // Opens game name when mouseenter target
-    e = e.target;
-    let text = e.children[0];
+    text = e.target.children[0];
     {
         // Animation down => up
         tl.fromTo(
             text, 
             .1, 
-            {y: 200, opacity: 0}, 
-            {y: 0, opacity: .7 , linear: BackOut.none});
+            {y: 200}, 
+            {y: 0, opacity: .7, ease: BackOut.none});
     }
+    text.style.display = 'block';
 };
+    // Hides box overlay
 function overlayOff(e){
     // Closes game name when mouseenter target
-    e = e.target;
-    let text = e.children[0];
+    let text = e.target.children[0];
     // Check for event
     if(e.event = 'mouseenter'){
         // Animation up => down 
         tl.fromTo(
             text, 
             .2, 
-            {y: 0, opacity: 0}, 
-            {y: 200, opacity: 0, linear: BackOut.none});
-        //text.classList.remove('trsp');
+            {y: 0}, 
+            {y: 200,opacity: 0, ease: BackOut.none});
     }
 };
+    // Returns title 
+function getTitle(e){
+    text = e.children[0];
+    return text.title;
+};
+    // Adds title to OVERLAY
+function fillText(e){
+    dbl = e.children[0];
+    dbl.innerText = getTitle(e);
+};
+
+
 
 // Animations
 
 
 // TESTING AREA
 
+//console.log(boxText.innerHTML = 'carrot');
+//boxText.innerHTML = 'carrot'
+
+
+
+// fillText(box0);
+
+
 
 
 // Just old snipets and stuff //
 /*
+function getTitle(e){
+    text = e.children[0];
+    text.innerText = getTitle(e);
+    text.return.title;
+}
+e = e.target;
+    boxText.innerHTML = 'Carrots';
+    console.log(getValue(box0));
 
 const tl = new TimelineMax();
 
