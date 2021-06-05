@@ -157,7 +157,7 @@ a{
     margin-bottom: 1.3rem;
 }
 /* Box placements */
-/*Utilities */
+/* Utilities */
 .utilities{
     grid-column: 2/6;
     grid-row: 1/2;
@@ -179,12 +179,14 @@ a{
     grid-row: 2/3;
     position: relative;
     top: 1rem;
+    overflow-y: hidden;
 }
 .box1{
     grid-column: 3/4;
     grid-row: 2/3;
     align-self: flex-end;
     position: relative;
+    overflow-y: hidden;
 }
 .box2{
     grid-column: 3/4;
@@ -192,12 +194,14 @@ a{
     justify-self: self-end;
     align-self: flex-end;
     position: relative;
+    overflow-y: hidden;
 }
 .box3{
     grid-column: 4/5;
     grid-row: 2/3;
     align-self: flex-end;
     position: relative;
+    overflow-y: hidden;
 }
 .box4{
     grid-column: 4/5;
@@ -205,12 +209,14 @@ a{
     justify-self: self-end;
     align-self: flex-end;
     position: relative;
+    overflow-y: hidden;
 }
 .box5{
     grid-column: 5/6;
     grid-row: 2/3;
     align-self: flex-end;
     position: relative;
+    overflow-y: hidden;
 }
 .box6{
     grid-column: 5/6;
@@ -218,41 +224,52 @@ a{
     justify-self: self-end;
     align-self: flex-end;
     position: relative;
+    overflow-y: hidden;
 }
 .box7{
     grid-column: 2/3;
     grid-row: 3/4;
     position: relative;
     right: 1rem;
+    overflow-y: hidden;
 }
 .box8{
     grid-column: 3/4;
     grid-row: 3/4;
+    overflow-y: hidden;
+    position: relative;
 }
 .box9{
     grid-column: 4/5;
     grid-row: 3/4;
+    overflow-y: hidden;
+    position: relative;
 }
 .box10{
     grid-column: 5/6;
     grid-row: 3/4;
+    overflow-y: hidden;
+    position: relative;
 }
 /* Last game */
 .box11{
     grid-column: 3/5;
     grid-row: 2/3;
+    overflow-y: hidden;
 }
 .box12{
     grid-column: 4/6;
     grid-row: 2/3;
     position: relative;
     justify-self: right;
+    overflow-y: hidden;
 }
 .box13{
     grid-column: 3/5;
     grid-row: 3/4;
     position: relative;
     top: -4rem;
+    overflow-y: hidden;
 }
 .box14{
     grid-column: 4/6;
@@ -260,6 +277,7 @@ a{
     position: relative;
     justify-self: right;
     top: -4rem;
+    overflow-y: hidden;
 }
 .box15{
     grid-column: 3/4;
@@ -267,6 +285,7 @@ a{
     position: relative;
     align-self: self-end;
     top: -3rem;
+    overflow-y: hidden;
 }
 .box16{
     grid-column: 4/5;
@@ -274,6 +293,7 @@ a{
     position: relative;
     align-self: self-end;
     top: -3rem;
+    overflow-y: hidden;
 }
 .box17{
     grid-column: 5/6;
@@ -281,6 +301,7 @@ a{
     position: relative;
     align-self: self-end;
     top: -3rem;
+    overflow-y: hidden;
 }
 /* Box sizing */
 .box-XL{
@@ -340,7 +361,7 @@ a{
     height: 6rem;
     width: inherit;
     bottom: 0;
-    opacity: .5;
+    opacity: .7;
     position: absolute;
     border-radius: 0 0 .4rem .4rem;
 }
@@ -354,59 +375,37 @@ a{
     font-size: 2rem;
     z-index: 5;
 }
+/* Text styling */
+.text{
+    position: absolute;
+    bottom: 0;
+    border-radius: 0 0 .4rem .4rem;
+    width: 100%;
+    background-color: black;
+    color: white;
+    height: max-content;
+    opacity: 0;
+    pointer-events: none;
+    cursor: none;
+    overflow-wrap: break-word;
+}
+.textXL{
+    font-size: 2.6rem;
+    transition: .4s;
+    padding: 2rem 3.5rem 3rem 2rem;
+}
+.textM{
+    font-size: 2rem;
+    transition: .3s;
+    padding: 2rem 3rem 2.5rem 2rem;
+}
+.textS{
+    font-size: 1.6rem;
+    transition: .3s;
+    padding: 1.5rem 2rem 2rem 1rem;
+}
 /* TESTING AREA */
 .hidden{
     background-color: yellow
 }
-.textXL{
-    position: absolute;
-    bottom: 0;
-    font-size: 2rem;
-    border-radius: 0 0 .4rem .4rem;
-    padding: 2rem;
-    height: auto;
-    width: 100%;
-    background-color: black;
-    color: white;
-    opacity: 0;
-    animation: 1s;
-}
-.showUp{
-    animation: translateUp .4s;
-}
-.showDown{
-    animation: translateDown .4s;
-}
 
-@keyframes translateUp {
-    0%{
-        transform: translateY(2rem);
-        opacity: 0;
-}   
-    50%{
-        opacity: 0;
-}   
-    90%{
-        opacity: 0.1;
-    }
-    100%{
-        transform: translateY(0);
-        opacity: .7;
-    }
-}
-@keyframes translateDown {
-    0%{
-        transform: translateY(0);
-        opacity: .7;
-}   
-    50%{
-        opacity: .1;
-}   
-    90%{
-        opacity: 0;
-    }
-    100%{
-        transform: translateY(2rem);
-        opacity: 0;
-    }
-}
