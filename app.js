@@ -1,5 +1,8 @@
 // DOM component selectors
+let prevScrollpos = window.pageYOffset;
+
     // Utilities selectors
+const utilBox1 = document.querySelector('.extra-util');
 
     // Box selectors
 const box0 = document.querySelector('.box0');
@@ -51,6 +54,9 @@ fillText(box9);
 box10.addEventListener("mouseover", overlayOn);
 box10.addEventListener('mouseout', overlayOff);
 fillText(box10);
+box11.addEventListener("mouseover", overlayOn);
+box11.addEventListener('mouseout', overlayOff);
+fillText(box11);
 
 
 // Functions
@@ -77,7 +83,7 @@ function overlayOff(e){
         // Animation up => down 
         tl.fromTo(
             text, 
-            .2, 
+            .6, 
             {y: 0}, 
             {y: 200,opacity: 0, ease: BackOut.none});
     }
@@ -89,16 +95,43 @@ function getTitle(e){
 };
     // Adds title to OVERLAY
 function fillText(e){
-    dbl = e.children[0];
-    dbl.innerText = getTitle(e);
+    a = e.children[0];
+    a.innerText = getTitle(e);
 };
-
-
+// Hide small util bar 
+window.onscroll = function hideBox() {
+    let currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      utilBox1.style.display = "flex";
+    } 
+    else {
+      utilBox1.style.display = "none";
+    }
+    prevScrollpos = currentScrollPos;
+  }
+  
 
 // Animations
 
 
 // TESTING AREA
+
+
+
+
+/*
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-50px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+
 
 //console.log(boxText.innerHTML = 'carrot');
 //boxText.innerHTML = 'carrot'
