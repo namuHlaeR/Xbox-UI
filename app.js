@@ -3,6 +3,7 @@ let prevScrollpos = window.pageYOffset;
 
     // Utilities selectors
 const utilBox1 = document.querySelector('.extra-util');
+const textHideNav = document.querySelector('.game-1');
 
     // Box selectors
 const box0 = document.querySelector('.box0');
@@ -102,10 +103,12 @@ function fillText(e){
 window.onscroll = function hideBox() {
     let currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos) {
-      utilBox1.style.display = "flex";
+      utilBox1.style.display = 'flex';
+      textHideNav.style.display = 'none'
     } 
     else {
-      utilBox1.style.display = "none";
+      utilBox1.style.display = 'none';
+      textHideNav.style.display = 'block'
     }
     prevScrollpos = currentScrollPos;
   }
@@ -116,6 +119,17 @@ window.onscroll = function hideBox() {
 
 // TESTING AREA
 
+/*
+window.onscroll = function hideBox() {
+    let currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      utilBox1.style.display = "flex";
+    } 
+    else {
+      textHideNav.style.display = "none";
+    }
+    prevScrollpos = currentScrollPos;
+  }
 
 
 

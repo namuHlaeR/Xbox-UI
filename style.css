@@ -92,6 +92,7 @@ img[src*="battery"]{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    transition: .5s;
 }
 .extra-util > img{
     height: 3rem;
@@ -123,6 +124,7 @@ a{
     grid-column: 2;
     position: relative;
     top: -1.5rem;
+    display: none;
 }
 .game-nav{
     grid-column: 2;
